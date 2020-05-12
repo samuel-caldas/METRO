@@ -1,0 +1,49 @@
+@charset "utf-8";
+.doc{
+	background-image: url(img/doc.png);
+	background-color: #2564A9;
+}
+.psd{
+	background-image: url(img/ps.png);
+	background-color: #0C5FA1;
+}
+.txt{
+	background-image: url(img/txt.png);
+	background-color: #04AEDA;
+}
+.htm{
+	background-image: url(img/htm.png);
+	background-color: #E0A500;
+}
+.css{
+	background-image: url(img/css.png);
+	background-color: #39BBEA;
+}
+.rar{
+	background-image: url(img/rar.png);
+	background-color: #008BD3;
+}
+.img{
+	background-image: url(img/img.png);
+	background-color: #1859B7;
+}
+.vd{
+	background-image: url(img/vid.png);
+	background-color: #2162A0;
+}
+.au{
+	background-image: url(img/iTunes%20alt.png);
+	background-color: #204FAD;
+}
+.exe{
+	background-image: url(img/exe.png);
+	background-color: #04AEDA;
+}
+.fold{
+	background-image: url(img/fold.png);
+	background-color: #04AEDA;
+}
+.ukn{
+	background-image: url(img/Documents.png);
+	background-color: #04AEDA;
+}
