@@ -1,0 +1,24 @@
+#box1{width:400px}
+#box2{width:800px}
+#campo{border:1px solid #666;padding:2px;width:200px}
+#container{bottom:0;left:40px;margin:0;min-height:500px;min-width:1000px;padding:0;position:absolute;top:120px;width:4239px}
+#header{float:left;margin:0 15px 0 0;padding:0;width:900px}
+#menu{-moz-border-radius:10px;-moz-box-shadow:2px 2px 5px #000;-webkit-border-radius:10px;-webkit-box-shadow:2px 2px 5px #000;background-color:#EBEBEB;border:1px solid #999;box-shadow:2px 2px 5px #000;clear:both;filter:alpha(opacity=80);float:left;font-family:DIN-Light, DIN-LightAlternate;left:20px;list-style-type:none;margin:0;opacity:.75;padding:10px;position:fixed;right:20px;text-transform:uppercase;top:40px;z-index:500}
+#menu ul{font-size:36px;list-style-type:none;margin:0;padding:0}
+#menu ul li{color:#777;display:inline;list-style-type:none;margin:0;padding:0 10px}
+#menu ul li a{color:#666;display:inline;list-style-type:none;margin:0;padding:0;text-decoration:none}
+#menu ul li a:hover{color:#000;display:inline;font-weight:700;list-style-type:none;margin:0;padding:0;text-decoration:none}
+.box{-moz-border-radius:10px;-moz-box-shadow:2px 2px 5px #000;-webkit-border-radius:10px;-webkit-box-shadow:2px 2px 5px #000;background-color:#EAEAEA;border:0 dashed #CCC;box-shadow:2px 2px 5px #000;float:left;line-height:22px;margin:30px;padding:5px 30px 5px 15px}
+.box h2{color:#FFF}
+.box p{color:#666;font-size:16px;line-height:24px;margin-bottom:10px;margin-top:20px;padding-bottom:10px;padding-left:20px}
+.camaleao{bottom:20%;left:0;margin-bottom:-150px;padding:0;position:absolute}
+.portifolio{margin:5px}
+.portifolio .conteudo{background-color:#EAEAEA;margin:.5em 0;padding:0 6px 8px;visibility:inherit}
+.portifolio H3{background-color:#999;color:#EEE;cursor:pointer;font:15px/16px DIN-Light, DIN-LightAlternate;margin:0 0 4px;padding:3px}
+a,a:hover{color:#fff;font-size:16px;letter-spacing:-1px;padding:0 5px;text-decoration:none}
+a:visited{color:#aaa;font-size:16px;letter-spacing:-1px;padding:0 5px;text-decoration:none}
+h1{border:none;color:#EFEFEF;font-size:800%;padding:30px 0 0;width:800px}
+h2{color:#FFF;font-size:25px;font-weight:400;padding:0 0 10px 20px}
+h3{color:#fff;font-size:14px;font-weight:700;letter-spacing:-1px;margin:0;padding:8px 0;text-transform:uppercase}
+img{border:none;margin:0}
+p{color:#fff;font-size:20px;line-height:38px;margin:20px 0 10px;padding:0 0 10px}
