@@ -1,42 +1,57 @@
-<?php
-	@session_start();
-	if (isset($_SESSION["nome"])){
-		echo("<script language='javascript'>parent.window.location.href='inicio.php' </script>");
-		}
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html>
 <head>
-<script type="text/javascript">
-	function loading(){
-		document.getElementById("box").style.visibility="hidden";
-		
-	};
-	<!--
-	function fechar(){
-	window.opener = window
-	window.close("#")}
-	// -->
-</script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CPainel - Login</title>
-<link href="estilo.css" rel="stylesheet" type="text/css" />
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Login</title>
+<link href="temas/metro.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="eng/eng1.js"></script>
 </head>
-<body>
-<div class="box" id="box">
-<div class="titulo">CPainel 3.0<a href="" onClick="fechar();"><div class="close">X</div></a></div>
-<div class="box2">
-<form action="autentica.php" method="post" target="login">
-<label>Nome:  </label>	<input name="nome" type="text" id="nome" size="30" maxlength="20" />
-<br />
-<label>Senha: </label>	<input name="senha" type="password" id="senha" size="30" maxlength="10" />
-<br />
-<a onclick="loading();"><input name="Login" type="submit" value="Login" class="btn"/></a>
+
+<body onLoad="sel(false); rigbtn()" id="body" onselectstart="return false">
+<a href="javascript:classlog();"><div id="claslog">Login Classico</div></a>
+<form action="login.php" method="get" target="loader">
+<table border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="middle" id="imgusr"><div class="usrimg"><img src="temas/metro/usrimg.png" width="150" height="150" id="usrimg"></div></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" class="usrnm" id="usrnm">Escolha um Usu&aacute;rio</td>
+  </tr>
+  <tr id="classlog">
+    <td align="center" valign="middle">
+      <input name="nome" type="text" class="txt" placeholder="Nome" id="nome"><a href="javascript:uclasslog()"><input name="btn" type="reset" class="btn" value="Cancelar"></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle"  class="usrpass" id="usrpass"><input onKeyUp="usnmt();" name="senha" type="password" class="txt" maxlength="10" placeholder="Senha" id="senha"><a href="javascript:loading()"><input name="btn" type="submit" class="btn" value="Entrar"></a></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" nowrap="nowrap" class="usrnm" id="erro">Senha Incorreta!</td>
+  </tr>
+</table>
+<div id="usrs" class="usrs">
+<table border="0" align="center" cellpadding="8" cellspacing="0">
+  <tr>
+<?php
+	include('eng/funcoes.php');
+	include('eng/conectar.php');
+	if (sess()){go('inicio.php');};
+	$saida=select('','login','','');
+	$j=count($saida);
+	for($i=0;$i<$j;$i++){
+echo '	<td align="center" valign="middle">
+    	<a href="#" onclick="chusr(\''.selimg($saida[$i][0]).'\',\''.$saida[$i][3].'\',\''.$saida[$i][1].'\');">
+        	<div class="musrimg"><img src="usrimg/'.selimg($saida[$i][0]).'" alt="Nome" width="50" height="50" /></div>
+    		<div class="usrnm">'.$saida[$i][3].'</div>
+        </a>
+    </td>';
+	}
+?>
+  </tr>
+</table>
+</div>
 </form>
-</div>
-</div>
-<iframe name="login" allowtransparency="true" width="0px" height="0px" class="loadframe"></iframe>
+<iframe id="loader" name="loader" style="visibility:hidden"></iframe>
+<img src="temas/metro/loading.gif" id="loading">
 </body>
 </html>
-
